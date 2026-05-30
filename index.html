@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="bosque-lima" data-type="geometrico" data-shapes="curvo">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sol Martínez — Marketing & Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Marcellus&family=Mulish:wght@300..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="nav__in">
+    <a class="brand" href="#top">
+      <span class="brand__mono">SM</span>
+      <span>Sol Martínez</span>
+    </a>
+    <div class="nav__links">
+      <a href="#sobre"      data-es="Sobre mí"     data-en="About">Sobre mí</a>
+      <a href="#servicios"  data-es="Servicios"    data-en="Services">Servicios</a>
+      <a href="#contacto"   data-es="Contacto"     data-en="Contact">Contacto</a>
+    </div>
+    <div class="nav__right">
+      <div class="lang" role="group" aria-label="Idioma">
+        <button data-lang="es" class="on">ES</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#contacto" class="btn btn--accent" data-es="Trabajemos" data-en="Let's talk">Trabajemos</a>
+    </div>
+  </div>
+</nav>
+
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" data-screen-label="Hero">
+  <div class="wrap hero__grid">
+    <div class="hero__panel">
+      <span class="swoosh swoosh--a"></span>
+      <span class="swoosh swoosh--b"></span>
+      <div class="hero__eyebrow">
+        <span class="kicker" data-es="Portfolio" data-en="Portfolio">Portfolio</span>
+        <span class="hero__yr">2026 · Montevideo, UY</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__hi" data-es="¡Hola! Soy" data-en="Hi, I'm">¡Hola! Soy</span>
+        <span class="l1">Sol</span><br>
+        <span class="l2">Martínez</span>
+      </h1>
+      <p class="hero__sub"
+         data-es="Estratega digital &amp; analista de datos. Ayudo a las marcas a crecer con contenido, comunidad y decisiones basadas en datos."
+         data-en="Digital strategist &amp; data analyst. I help brands grow through content, community and data-driven decisions.">
+        Estratega digital &amp; analista de datos. Ayudo a las marcas a crecer con contenido, comunidad y decisiones basadas en datos.
+      </p>
+      <div class="hero__roles">
+        <span class="chip" data-es="Estrategia digital" data-en="Digital strategy">Estrategia digital</span>
+        <span class="chip" data-es="Community" data-en="Community">Community</span>
+        <span class="chip" data-es="Influencer marketing" data-en="Influencer marketing">Influencer marketing</span>
+        <span class="chip" data-es="Análisis de datos" data-en="Data analysis">Análisis de datos</span>
+      </div>
+      <div class="hero__cta">
+        <a href="#contacto" class="btn btn--accent" data-es="Trabajemos juntos" data-en="Let's work together">Trabajemos juntos <span class="ar">↗</span></a>
+        <a href="cv.html" target="_blank" rel="noopener" class="btn btn--on-dark" data-es="Ver CV" data-en="View CV">Ver CV</a>
+      </div>
+      <div class="hero__media">
+        <span class="swoosh swoosh--c"></span>
+        <div class="hero__photo">
+          <image-slot id="hero-portrait" shape="rounded" radius="16" fit="cover"
+            src="assets/sol-portrait.webp"
+            placeholder="Foto / Photo"></image-slot>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section about" id="sobre" data-screen-label="Sobre mí">
+  <div class="wrap">
+    <div class="about__inner">
+      <span class="swoosh swoosh--d"></span>
+      <div class="about__grid">
+        <div>
+          <span class="kicker on-dark" data-es="Sobre mí" data-en="About">Sobre mí</span>
+          <h2 data-es="Creativa de formación, analítica por método." data-en="Creative by training, analytical by method.">Creativa de formación, analítica por método.</h2>
+          <p class="about__lead"
+             data-es="Soy estratega de marcas con foco en e-commerce, contenido e influencia digital. Mi paso por L'Oréal me permitió liderar proyectos de e-commerce, influencer marketing y comunicación omnicanal para marcas como Lancôme, Kiehl's y Biotherm. Hoy trabajo como Data Analyst en WILD FI con marcas masivas de consumo como Dove y Axe."
+             data-en="I'm a brand strategist focused on e-commerce, content and digital influence. My time at L'Oréal let me lead e-commerce, influencer marketing and omnichannel communication for brands like Lancôme, Kiehl's and Biotherm. Today I work as a Data Analyst at WILD FI with mass-consumer brands like Dove and Axe.">
+            Soy estratega de marcas con foco en e-commerce, contenido e influencia digital. Mi paso por L'Oréal me permitió liderar proyectos de e-commerce, influencer marketing y comunicación omnicanal para marcas como Lancôme, Kiehl's y Biotherm. Hoy trabajo como Data Analyst en WILD FI con marcas masivas de consumo como Dove y Axe.
+          </p>
+          <p class="about__lead small"
+             data-es="A esa mirada de negocio y datos le sumo storytelling, branding y la sensibilidad para construir comunidades que de verdad se quedan."
+             data-en="To that business-and-data lens I add storytelling, branding and the sensibility to build communities that actually stick.">
+            A esa mirada de negocio y datos le sumo storytelling, branding y la sensibilidad para construir comunidades que de verdad se quedan.
+          </p>
+          <dl class="about__meta">
+            <div>
+              <dt data-es="Base" data-en="Based in">Base</dt>
+              <dd>Montevideo, Uruguay</dd>
+            </div>
+            <div>
+              <dt data-es="Idiomas" data-en="Languages">Idiomas</dt>
+              <dd data-es="Español · Inglés · Portugués" data-en="Spanish · English · Portuguese">Español · Inglés · Portugués</dd>
+            </div>
+            <div>
+              <dt data-es="Disponibilidad" data-en="Availability">Disponibilidad</dt>
+              <dd data-es="Freelance / remoto" data-en="Freelance / remote">Freelance / remoto</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__item">L'Oréal</span>
+    <span class="marquee__item">Kiehl's</span>
+    <span class="marquee__item">Biotherm</span>
+    <span class="marquee__item">Dove</span>
+    <span class="marquee__item">Axe</span>
+    <span class="marquee__item">Lancôme</span>
+    <span class="marquee__item">YSL</span>
+    <span class="marquee__item">Giorgio Armani</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee__item">L'Oréal</span>
+    <span class="marquee__item">Kiehl's</span>
+    <span class="marquee__item">Biotherm</span>
+    <span class="marquee__item">Dove</span>
+    <span class="marquee__item">Axe</span>
+    <span class="marquee__item">Lancôme</span>
+    <span class="marquee__item">YSL</span>
+    <span class="marquee__item">Giorgio Armani</span>
+  </div>
+</div>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section section--soft" id="servicios" data-screen-label="Servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-es="Cómo puedo ayudarte" data-en="How I can help">Cómo puedo ayudarte</h2>
+      <span class="num" data-es="Servicios freelance" data-en="Freelance services">Servicios freelance</span>
+    </div>
+    <div class="svc__grid">
+      <article class="svc reveal">
+        <span class="svc__dot"></span>
+        <span class="svc__n">01</span>
+        <h3 data-es="Community Management" data-en="Community Management">Community Management</h3>
+        <p data-es="Gestión de redes de punta a punta: línea editorial, calendario, copy y conversación con tu comunidad para que crezca y se quede."
+           data-en="End-to-end social management: editorial line, calendar, copy and real conversation with your community so it grows and sticks.">
+          Gestión de redes de punta a punta: línea editorial, calendario, copy y conversación con tu comunidad para que crezca y se quede.
+        </p>
+      </article>
+      <article class="svc reveal">
+        <span class="svc__dot"></span>
+        <span class="svc__n">02</span>
+        <h3 data-es="Estrategia de contenido" data-en="Content strategy">Estrategia de contenido</h3>
+        <p data-es="Diagnóstico, posicionamiento y un plan de contenido con storytelling de marca y formatos pensados para cada canal."
+           data-en="Audit, positioning and a content plan with brand storytelling and formats built for each channel.">
+          Diagnóstico, posicionamiento y un plan de contenido con storytelling de marca y formatos pensados para cada canal.
+        </p>
+      </article>
+      <article class="svc reveal">
+        <span class="svc__dot"></span>
+        <span class="svc__n">03</span>
+        <h3 data-es="Influencer marketing &amp; eventos" data-en="Influencer marketing & events">Influencer marketing &amp; eventos</h3>
+        <p data-es="Scouting de perfiles, gestión de colaboraciones y producción de eventos de marca, del brief a la evaluación de resultados."
+           data-en="Profile scouting, collaboration management and brand-event production, from brief to results evaluation.">
+          Scouting de perfiles, gestión de colaboraciones y producción de eventos de marca, del brief a la evaluación de resultados.
+        </p>
+      </article>
+      <article class="svc reveal">
+        <span class="svc__dot"></span>
+        <span class="svc__n">04</span>
+        <h3 data-es="Análisis de datos &amp; reporting" data-en="Data analysis & reporting">Análisis de datos &amp; reporting</h3>
+        <p data-es="Dashboards, seguimiento de KPIs y reportes claros que convierten los números en decisiones (CRM, Meta &amp; Google Ads)."
+           data-en="Dashboards, KPI tracking and clear reports that turn numbers into decisions (CRM, Meta & Google Ads).">
+          Dashboards, seguimiento de KPIs y reportes claros que convierten los números en decisiones (CRM, Meta &amp; Google Ads).
+        </p>
+      </article>
+    </div>
+
+    <div class="tools">
+      <div>
+        <h4 data-es="Herramientas" data-en="Tools">Herramientas</h4>
+        <ul>
+          <li>CRM</li><li>Meta &amp; Google Ads</li><li>Data Slayer</li><li>SAP</li><li>Trello</li><li>Microsoft Office</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-es="Expertise" data-en="Expertise">Expertise</h4>
+        <ul>
+          <li data-es="Branding" data-en="Branding">Branding</li><li>Storytelling</li><li data-es="E-commerce" data-en="E-commerce">E-commerce</li><li data-es="CRM &amp; email" data-en="CRM &amp; email">CRM &amp; email</li><li data-es="Omnicanal" data-en="Omnichannel">Omnicanal</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-es="Idiomas" data-en="Languages">Idiomas</h4>
+        <ul>
+          <li data-es="Español — nativo" data-en="Spanish — native">Español — nativo</li><li data-es="Inglés — avanzado" data-en="English — advanced">Inglés — avanzado</li><li data-es="Portugués — intermedio" data-en="Portuguese — intermediate">Portugués — intermedio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CV BAND ===================== -->
+<section class="section cv" data-screen-label="CV">
+  <div class="wrap">
+    <div class="cv__in">
+      <span class="swoosh swoosh--f"></span>
+      <div class="cv__txt">
+        <span class="kicker on-dark" data-es="Currículum" data-en="Résumé">Currículum</span>
+        <h2 data-es="¿Querés el detalle completo?" data-en="Want the full detail?">¿Querés el detalle completo?</h2>
+        <p data-es="Mirá mi experiencia y formación en un solo lugar."
+           data-en="See my experience and education all in one place.">
+          Mirá mi experiencia y formación en un solo lugar.
+        </p>
+      </div>
+      <div class="cv__btns">
+        <a href="cv.html" target="_blank" rel="noopener" class="btn btn--solid" data-es="Ver / Descargar CV" data-en="View / Download CV">Ver / Descargar CV <span class="ar">↗</span></a>
+        <a href="https://www.linkedin.com/in/sol-martinez-/" target="_blank" rel="noopener" class="btn btn--ghost" data-es="Ver LinkedIn" data-en="View LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section contact" id="contacto" data-screen-label="Contacto">
+  <span class="swoosh swoosh--g"></span>
+  <span class="swoosh swoosh--h"></span>
+  <div class="wrap">
+    <span class="kicker on-dark" data-es="Contacto" data-en="Contact">Contacto</span>
+    <h2 data-es="Trabajemos <em>juntos</em>." data-en="Let's <em>work</em> together.">Trabajemos <em>juntos</em>.</h2>
+    <a class="contact__mail" href="mailto:martinezrissotto@gmail.com">martinezrissotto@gmail.com</a>
+    <div class="contact__links">
+      <a href="mailto:martinezrissotto@gmail.com" class="btn btn--on-dark" data-es="Enviar email" data-en="Send email">Enviar email <span class="ar">↗</span></a>
+      <a href="https://www.linkedin.com/in/sol-martinez-/" target="_blank" rel="noopener" class="btn btn--on-dark">LinkedIn <span class="ar">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="image-slot.js"></script>
+<script src="site.js"></script>
+
+<!-- Tweaks panel (React) -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks-app.jsx"></script>
+
+</body>
+</html>

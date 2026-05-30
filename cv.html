@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sol Martínez — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Mulish:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#2b3f1c; --accent:#5a7a32; --lime:#e3e84a; --ink:#283318; --soft:#5f6b4f;
+    --bg:#f6f4ea; --line:rgba(40,51,24,.18);
+    --serif:"Poppins",system-ui,sans-serif; --sans:"Mulish",system-ui,sans-serif;
+    --mono:"Space Mono",monospace;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+    font-size:13.5px; line-height:1.5; -webkit-font-smoothing:antialiased; font-weight:380; }
+
+  /* toolbar (screen only) */
+  .bar{ position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between;
+    gap:16px; padding:14px 22px; background:rgba(246,241,231,.9); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line); }
+  .bar__r{ display:flex; align-items:center; gap:12px; }
+  .bar a, .bar button{ font-family:var(--sans); font-size:.84rem; font-weight:600; cursor:pointer;
+    border-radius:999px; padding:.7em 1.2em; border:1px solid var(--line); background:transparent;
+    color:var(--ink); transition:.2s; text-decoration:none; }
+  .bar button.print{ background:var(--ink); color:var(--bg); border-color:var(--ink); }
+  .bar button.print:hover{ background:var(--accent); border-color:var(--accent); }
+  .bar a:hover{ border-color:var(--ink); }
+  .bar .back{ font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); }
+  .langcv{ display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; }
+  .langcv button{ border:0; border-radius:0; padding:7px 12px; font-family:var(--mono); font-size:.66rem;
+    letter-spacing:.1em; background:transparent; color:var(--soft); }
+  .langcv button.on{ background:var(--ink); color:var(--lime); }
+
+  /* page */
+  .page{ max-width:820px; margin:26px auto; background:#fffdf8; padding:54px 60px;
+    box-shadow:0 24px 60px -34px rgba(36,48,41,.45); border-radius:6px; }
+
+  header.cvh{ border-bottom:2px solid var(--ink); padding-bottom:20px; margin-bottom:26px; }
+  .cvh h1{ font-family:var(--serif); font-size:42px; line-height:.95; margin:0 0 4px;
+    letter-spacing:-.02em; font-weight:700; }
+  .cvh .role{ font-family:var(--serif); font-weight:500; font-size:17px; color:var(--accent); margin-bottom:14px; }
+  .cvh .meta{ font-family:var(--mono); font-size:.72rem; letter-spacing:.04em; color:var(--soft);
+    display:flex; flex-wrap:wrap; gap:6px 16px; }
+  .cvh .meta a{ color:var(--accent); text-decoration:none; }
+
+  section{ margin-bottom:24px; }
+  h2.sec{ font-family:var(--mono); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 14px; padding-bottom:7px; border-bottom:1px solid var(--line); }
+  .lead{ font-size:13.5px; line-height:1.6; color:var(--ink); }
+  .lead b{ color:var(--dark); }
+
+  .entry{ margin-bottom:16px; }
+  .entry__top{ display:flex; justify-content:space-between; align-items:baseline; gap:14px; }
+  .entry__top h3{ font-family:var(--serif); font-size:17px; margin:0; font-weight:600; }
+  .entry__yr{ font-family:var(--mono); font-size:.7rem; letter-spacing:.04em; color:var(--soft); white-space:nowrap; }
+  .entry__co{ font-size:12.5px; color:var(--soft); margin:1px 0 7px; font-style:italic; }
+  ul.b{ list-style:none; margin:0; padding:0; display:grid; gap:4px; }
+  ul.b li{ position:relative; padding-left:16px; font-size:12.8px; line-height:1.45; }
+  ul.b li::before{ content:""; position:absolute; left:0; top:.5em; width:7px; height:7px;
+    border-radius:2px; background:var(--lime); }
+
+  .cols{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; }
+  .cols h4{ font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--dark); margin:0 0 8px; }
+  .cols ul{ list-style:none; margin:0; padding:0; display:grid; gap:3px; }
+  .cols li{ font-size:12.5px; color:var(--ink); }
+  .cols li span{ color:var(--soft); font-style:italic; }
+
+  .two{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+
+  @media print{
+    @page{ size:A4; margin:13mm; }
+    body{ background:#fff; font-size:10.5px; }
+    .bar{ display:none; }
+    .page{ box-shadow:none; margin:0; max-width:none; padding:0; border-radius:0; background:#fff; }
+    .cvh h1{ font-size:34px; }
+    section{ margin-bottom:15px; break-inside:avoid; }
+    .entry{ break-inside:avoid; }
+  }
+  @media (max-width:680px){
+    .page{ padding:30px 22px; }
+    .cols{ grid-template-columns:1fr; }
+    .two{ grid-template-columns:1fr; }
+    .cvh h1{ font-size:36px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="back" href="index.html">← Portfolio</a>
+  <div class="bar__r">
+    <div class="langcv" role="group" aria-label="Idioma">
+      <button data-lang="es" class="on">ES</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <button class="print" onclick="window.print()" data-es="↓ Descargar / Imprimir PDF" data-en="↓ Download / Print PDF">↓ Descargar / Imprimir PDF</button>
+  </div>
+</div>
+
+<div class="page">
+  <header class="cvh">
+    <h1>Sol Martínez Rissotto</h1>
+    <p class="role" data-es="Estratega digital · Data Analyst · Marketing de marca" data-en="Digital Strategist · Data Analyst · Brand Marketing">Estratega digital · Data Analyst · Marketing de marca</p>
+    <div class="meta">
+      <span>Montevideo, Uruguay</span>
+      <span>(+598) 094 344 225</span>
+      <a href="mailto:martinezrissotto@gmail.com">martinezrissotto@gmail.com</a>
+      <a href="https://www.linkedin.com/in/sol-martinez-/" target="_blank" rel="noopener">linkedin.com/in/sol-martinez-</a>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="sec" data-es="Perfil profesional" data-en="Professional profile">Perfil profesional</h2>
+    <p class="lead"
+       data-es="Estratega de marcas con foco en e-commerce, contenido e influencia digital. Creativa, analítica y con experiencia en marcas líderes del mercado <b>beauty</b>. Estudiante avanzada de Comunicación con orientación a branding, digital y estrategia. Mi experiencia en <b>L'Oréal</b> me permitió liderar proyectos de e-commerce, influencer marketing y comunicación omnicanal para marcas como Lancôme, Kiehl's y Biotherm. Actualmente me desempeño como <b>Data Analyst en WILD FI</b>, trabajando con marcas masivas de consumo y fintech."
+       data-en="Brand strategist focused on e-commerce, content and digital influence. Creative, analytical and experienced with leading <b>beauty</b> brands. Advanced Communication student oriented toward branding, digital and strategy. My experience at <b>L'Oréal</b> let me lead e-commerce, influencer marketing and omnichannel communication projects for brands like Lancôme, Kiehl's and Biotherm. I currently work as a <b>Data Analyst at WILD FI</b>, with mass-consumer and fintech brands.">
+      Estratega de marcas con foco en e-commerce, contenido e influencia digital. Creativa, analítica y con experiencia en marcas líderes del mercado <b>beauty</b>. Estudiante avanzada de Comunicación con orientación a branding, digital y estrategia. Mi experiencia en <b>L'Oréal</b> me permitió liderar proyectos de e-commerce, influencer marketing y comunicación omnicanal para marcas como Lancôme, Kiehl's y Biotherm. Actualmente me desempeño como <b>Data Analyst en WILD FI</b>, trabajando con marcas masivas de consumo y fintech.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="sec" data-es="Experiencia" data-en="Experience">Experiencia</h2>
+
+    <div class="entry">
+      <div class="entry__top"><h3>Data Analyst — WILD FI</h3><span class="entry__yr" data-es="2025 — Actualidad" data-en="2025 — Present">2025 — Actualidad</span></div>
+      <p class="entry__co" data-es="Performance para Dove, Axe, Itaú y ARCOR" data-en="Performance for Dove, Axe, Itaú &amp; ARCOR">Performance para Dove, Axe, Itaú y ARCOR</p>
+      <ul class="b">
+        <li data-es="Análisis y monitoreo de KPIs de performance para campañas digitales." data-en="Analysis and monitoring of performance KPIs for digital campaigns.">Análisis y monitoreo de KPIs de performance para campañas digitales.</li>
+        <li data-es="Integro análisis de competencia y datos de performance en la construcción de briefs para la toma de decisiones estratégicas." data-en="I integrate competitive analysis and performance data into briefs to drive strategic decision-making.">Integro análisis de competencia y datos de performance en la construcción de briefs para la toma de decisiones estratégicas.</li>
+        <li data-es="Desarrollo informes de resultados para seguimiento mensual y optimizaciones junto al equipo de medios." data-en="I build results reports for monthly tracking and optimizations alongside the media team.">Desarrollo informes de resultados para seguimiento mensual y optimizaciones junto al equipo de medios.</li>
+        <li data-es="Análisis comparativos por canal, campaña y período para detectar oportunidades de optimización." data-en="Comparative analysis by channel, campaign and period to spot optimization opportunities.">Análisis comparativos por canal, campaña y período para detectar oportunidades de optimización.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry__top"><h3>Brand Consumer Engagement &amp; A&amp;I — L'Oréal</h3><span class="entry__yr">2025</span></div>
+      <p class="entry__co" data-es="Lancôme, Kiehl's y Biotherm" data-en="Lancôme, Kiehl's &amp; Biotherm">Lancôme, Kiehl's y Biotherm</p>
+      <ul class="b">
+        <li data-es="Ejecuté las estrategias de CRM, email marketing y magazines para cada marca." data-en="Ran the CRM, email marketing and magazine strategies for each brand.">Ejecuté las estrategias de CRM, email marketing y magazines para cada marca.</li>
+        <li data-es="Planifiqué y monitoreé campañas con influencers, desde el scouting hasta la evaluación de resultados." data-en="Planned and monitored influencer campaigns, from scouting to results evaluation.">Planifiqué y monitoreé campañas con influencers, desde el scouting hasta la evaluación de resultados.</li>
+        <li data-es="Actué como nexo entre la marca y las perfumerías, asegurando los códigos visuales y narrativos de cada marca." data-en="Acted as the link between brand and retailers, safeguarding each brand's visual and narrative codes.">Actué como nexo entre la marca y las perfumerías, asegurando los códigos visuales y narrativos de cada marca.</li>
+        <li data-es="Desarrollé guidelines y briefs creativos para agencia de medios y de advocacy." data-en="Developed guidelines and creative briefs for media and advocacy agencies.">Desarrollé guidelines y briefs creativos para agencia de medios y de advocacy.</li>
+        <li data-es="Traduje las directrices globales en activaciones, contenidos y campañas alineadas al consumidor uruguayo." data-en="Translated global guidelines into activations, content and campaigns aligned with the Uruguayan consumer.">Traduje las directrices globales en activaciones, contenidos y campañas alineadas al consumidor uruguayo.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry__top"><h3 data-es="E-commerce Lead &amp; Asistente de Marketing — L'Oréal" data-en="E-commerce Lead &amp; Marketing Assistant — L'Oréal">E-commerce Lead &amp; Asistente de Marketing — L'Oréal</h3><span class="entry__yr">2023 — 2024</span></div>
+      <p class="entry__co" data-es="Todas las marcas de la división · Lancôme, YSL y Biotherm" data-en="All division brands · Lancôme, YSL &amp; Biotherm">Todas las marcas de la división · Lancôme, YSL y Biotherm</p>
+      <ul class="b">
+        <li data-es="Gestioné relaciones con clientes B2B clave como Farmashop y San Roque." data-en="Managed relationships with key B2B clients such as Farmashop and San Roque.">Gestioné relaciones con clientes B2B clave como Farmashop y San Roque.</li>
+        <li data-es="Diseñé e implementé promociones web alineadas a los objetivos comerciales y de marca." data-en="Designed and implemented web promotions aligned with business and brand goals.">Diseñé e implementé promociones web alineadas a los objetivos comerciales y de marca.</li>
+        <li data-es="Coordiné campañas online y planificación de medios garantizando coherencia estratégica." data-en="Coordinated online campaigns and media planning, ensuring strategic coherence.">Coordiné campañas online y planificación de medios garantizando coherencia estratégica.</li>
+        <li data-es="Analicé indicadores clave (ROAS, desempeño de campañas, ventas) para optimizar decisiones de inversión." data-en="Analyzed key metrics (ROAS, campaign performance, sales) to optimize investment decisions.">Analicé indicadores clave (ROAS, desempeño de campañas, ventas) para optimizar decisiones de inversión.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry__top"><h3 data-es="Asistente de Marketing — L'Oréal" data-en="Marketing Assistant — L'Oréal">Asistente de Marketing — L'Oréal</h3><span class="entry__yr">2022 — 2023</span></div>
+      <p class="entry__co">Biotherm, Giorgio Armani, Valentino &amp; Ralph Lauren</p>
+      <ul class="b">
+        <li data-es="Gestioné órdenes de compra y flujos de trabajo en SAP." data-en="Managed purchase orders and workflows in SAP.">Gestioné órdenes de compra y flujos de trabajo en SAP.</li>
+        <li data-es="Brindé soporte en la organización y ejecución de eventos de marca coherentes con el posicionamiento." data-en="Supported the organization and execution of brand events consistent with positioning.">Brindé soporte en la organización y ejecución de eventos de marca coherentes con el posicionamiento.</li>
+        <li data-es="Implementé estrategias de marketing de influencia y scouting de perfiles afines a cada marca." data-en="Implemented influence marketing strategies and scouting of profiles aligned with each brand.">Implementé estrategias de marketing de influencia y scouting de perfiles afines a cada marca.</li>
+        <li data-es="Colaboré con agencias creativas en materiales visuales para online y retail, fortaleciendo la omnicanalidad." data-en="Collaborated with creative agencies on visual materials for online and retail, strengthening omnichannel.">Colaboré con agencias creativas en materiales visuales para online y retail, fortaleciendo la omnicanalidad.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry__top"><h3>Document Coordinator / Bid Management — Tata Consultancy Services</h3><span class="entry__yr">2021 — 2022</span></div>
+      <p class="entry__co" data-es="Licitaciones y propuestas internacionales" data-en="International tenders and proposals">Licitaciones y propuestas internacionales</p>
+      <ul class="b">
+        <li data-es="Diseñé propuestas visuales para licitaciones y presentaciones comerciales internacionales." data-en="Designed visual proposals for international tenders and commercial presentations.">Diseñé propuestas visuales para licitaciones y presentaciones comerciales internacionales.</li>
+        <li data-es="Coordiné servicios de edición y copywriting para propuestas dirigidas al mercado estadounidense." data-en="Coordinated editing and copywriting services for proposals aimed at the US market.">Coordiné servicios de edición y copywriting para propuestas dirigidas al mercado estadounidense.</li>
+        <li data-es="Gestioné atención al cliente B2B en inglés, garantizando una comunicación fluida y profesional." data-en="Handled B2B client support in English, ensuring smooth and professional communication.">Gestioné atención al cliente B2B en inglés, garantizando una comunicación fluida y profesional.</li>
+        <li data-es="Implementé métodos de control para asegurar entregas a tiempo junto a diseño, redacción y equipos comerciales." data-en="Implemented control methods to ensure on-time delivery alongside design, copy and commercial teams.">Implementé métodos de control para asegurar entregas a tiempo junto a diseño, redacción y equipos comerciales.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec" data-es="Educación" data-en="Education">Educación</h2>
+    <div class="two">
+      <div class="entry">
+        <div class="entry__top"><h3 data-es="Licenciatura en Comunicación" data-en="BA in Communication">Licenciatura en Comunicación</h3><span class="entry__yr">2019 — 2026</span></div>
+        <p class="entry__co" data-es="Universidad de la República — Fac. de Comunicación e Información" data-en="Universidad de la República — School of Communication &amp; Information">Universidad de la República — Fac. de Comunicación e Información</p>
+      </div>
+      <div class="entry">
+        <div class="entry__top"><h3 data-es="Analista avanzado en e-commerce" data-en="Advanced E-commerce Analyst">Analista avanzado en e-commerce</h3><span class="entry__yr">2024</span></div>
+        <p class="entry__co">Universidad de la Empresa</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec" data-es="Habilidades &amp; idiomas" data-en="Skills &amp; languages">Habilidades &amp; idiomas</h2>
+    <div class="cols">
+      <div>
+        <h4 data-es="Técnicas" data-en="Technical">Técnicas</h4>
+        <ul>
+          <li>Power BI</li><li>SAP</li><li>Data Slayer</li><li>Meta &amp; Google Ads</li><li>Trello · Nodum</li><li>Microsoft Office</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-es="Interpersonales" data-en="Interpersonal">Interpersonales</h4>
+        <ul>
+          <li data-es="Comunicación asertiva" data-en="Assertive communication">Comunicación asertiva</li><li data-es="Trabajo en equipo" data-en="Teamwork">Trabajo en equipo</li><li data-es="Organización" data-en="Organization">Organización</li><li data-es="Resolución de problemas" data-en="Problem solving">Resolución de problemas</li><li data-es="Enfoque en el cliente" data-en="Client focus">Enfoque en el cliente</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-es="Idiomas" data-en="Languages">Idiomas</h4>
+        <ul>
+          <li data-es="Español <span>— nativo</span>" data-en="Spanish <span>— native</span>">Español <span>— nativo</span></li><li data-es="Inglés <span>— avanzado</span>" data-en="English <span>— advanced</span>">Inglés <span>— avanzado</span></li><li data-es="Portugués <span>— intermedio</span>" data-en="Portuguese <span>— intermediate</span>">Portugués <span>— intermedio</span></li><li data-es="Coreano <span>— básico</span>" data-en="Korean <span>— basic</span>">Coreano <span>— básico</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec" data-es="Desarrollo profesional" data-en="Professional development">Desarrollo profesional</h2>
+    <ul class="b">
+      <li data-es="Marketing Digital: Workshop SEO — Senpai Academy" data-en="Digital Marketing: SEO Workshop — Senpai Academy">Marketing Digital: Workshop SEO — Senpai Academy</li>
+      <li data-es="Brief para Agencias: Taller Estratégico — Brother Montevideo" data-en="Briefing for Agencies: Strategy Workshop — Brother Montevideo">Brief para Agencias: Taller Estratégico — Brother Montevideo</li>
+      <li data-es="Storytelling Aplicado a la Comunicación — Fundación Telefónica" data-en="Storytelling Applied to Communication — Fundación Telefónica">Storytelling Aplicado a la Comunicación — Fundación Telefónica</li>
+      <li data-es="Branding y Gestión de Marca — Instituto IB" data-en="Branding &amp; Brand Management — Instituto IB">Branding y Gestión de Marca — Instituto IB</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+(function(){
+  var STORE = "sm-lang";
+  var nodes = document.querySelectorAll("[data-es]");
+  var btns  = document.querySelectorAll(".langcv button");
+  function apply(lang){
+    document.documentElement.lang = lang;
+    nodes.forEach(function(el){
+      var v = el.getAttribute("data-" + lang);
+      if (v != null) el.innerHTML = v;
+    });
+    btns.forEach(function(b){ b.classList.toggle("on", b.getAttribute("data-lang") === lang); });
+    try { localStorage.setItem(STORE, lang); } catch(e){}
+  }
+  btns.forEach(function(b){
+    b.addEventListener("click", function(){ apply(b.getAttribute("data-lang")); });
+  });
+  var saved = "es";
+  try { saved = localStorage.getItem(STORE) || "es"; } catch(e){}
+  apply(saved);
+})();
+</script>
+
+</body>
+</html>
