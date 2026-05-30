@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="bosque-lima" data-type="geometrico" data-shapes="curvo">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sol Martínez — Marketing & Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Marcellus&family=Mulish:wght@300..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="nav__in">
+    <a class="brand" href="#top">
+      <span class="brand__mono">SM</span>
+      <span>Sol Martínez</span>
+    </a>
+    <div class="nav__links">
+      <a href="#sobre"      data-es="Sobre mí"     data-en="About">Sobre mí</a>
+      <a href="#servicios"  data-es="Servicios"    data-en="Services">Servicios</a>
+      <a href="#contacto"   data-es="Contacto"     data-en="Contact">Contacto</a>
+    </div>
+    <div class="nav__right">
+      <div class="lang" role="group" aria-label="Idioma">
+        <button data-lang="es" class="on">ES</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#contacto" class="btn btn--accent" data-es="Trabajemos" data-en="Let's talk">Trabajemos</a>
+    </div>
+  </div>
+</nav>
+
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" data-screen-label="Hero">
+  <div class="wrap hero__grid">
+    <div class="hero__panel">
+      <span class="swoosh swoosh--a"></span>
+      <span class="swoosh swoosh--b"></span>
+      <div class="hero__eyebrow">
+        <span class="kicker" data-es="Portfolio" data-en="Portfolio">Portfolio</span>
+        <span class="hero__yr">2026 · Montevideo, UY</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__hi" data-es="¡Hola! Soy" data-en="Hi, I'm">¡Hola! Soy</span>
+        <span class="l1">Sol</span><br>
+        <span class="l2">Martínez</span>
+      </h1>
+      <p class="hero__sub"
+         data-es="Estratega digital &amp; analista de datos. Ayudo a las marcas a crecer con contenido, comunidad y decisiones basadas en datos."
+         data-en="Digital strategist &amp; data analyst. I help brands grow through content, community and data-driven decisions.">
+        Estratega digital &amp; analista de datos. Ayudo a las marcas a crecer con contenido, comunidad y decisiones basadas en datos.
+      </p>
+      <div class="hero__roles">
+        <span class="chip" data-es="Estrategia digital" data-en="Digital strategy">Estrategia digital</span>
+        <span class="chip" data-es="Community" data-en="Community">Community</span>
+        <span class="chip" data-es="Influencer marketing" data-en="Influencer marketing">Influencer marketing</span>
+        <span class="chip" data-es="Análisis de datos" data-en="Data analysis">Análisis de datos</span>
+      </div>
+      <div class="hero__cta">
+        <a href="#contacto" class="btn btn--accent" data-es="Trabajemos juntos" data-en="Let's work together">Trabajemos juntos <span class="ar">↗</span></a>
+        <a href="cv.html" target="_blank" rel="noopener" class="btn btn--on-dark" data-es="Ver CV" data-en="View CV">Ver CV</a>
+      </div>
+      <div class="hero__media">
+        <span class="swoosh swoosh--c"></span>
+        <div class="hero__photo">
+          <image-slot id="hero-portrait" shape="rounded" radius="16" fit="cover"
+            src="data:image/webp;base64,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"
+            placeholder="Foto / Photo"></image-slot>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section about" id="sobre" data-screen-label="Sobre mí">
+  <div class="wrap">
+    <div class="about__inner">
+      <span class="swoosh swoosh--d"></span>
+      <div class="about__grid">
+        <div>
+          <span class="kicker on-dark" data-es="Sobre mí" data-en="About">Sobre mí</span>
+          <h2 data-es="Creativa de formación, analítica por método." data-en="Creative by training, analytical by method.">Creativa de formación, analítica por método.</h2>
+          <p class="about__lead"
+             data-es="Soy estratega de marcas con foco en e-commerce, contenido e influencia digital. Mi paso por L'Oréal me permitió liderar proyectos de e-commerce, influencer marketing y comunicación omnicanal para marcas como Lancôme, Kiehl's y Biotherm. Hoy trabajo como Data Analyst en WILD FI con marcas masivas de consumo como Dove y Axe."
+             data-en="I'm a brand strategist focused on e-commerce, content and digital influence. My time at L'Oréal let me lead e-commerce, influencer marketing and omnichannel communication for brands like Lancôme, Kiehl's and Biotherm. Today I work as a Data Analyst at WILD FI with mass-consumer brands like Dove and Axe.">
+            Soy estratega de marcas con foco en e-commerce, contenido e influencia digital. Mi paso por L'Oréal me permitió liderar proyectos de e-commerce, influencer marketing y comunicación omnicanal para marcas como Lancôme, Kiehl's y Biotherm. Hoy trabajo como Data Analyst en WILD FI con marcas masivas de consumo como Dove y Axe.
+          </p>
+          <p class="about__lead small"
+             data-es="A esa mirada de negocio y datos le sumo storytelling, branding y la sensibilidad para construir comunidades que de verdad se quedan."
+             data-en="To that business-and-data lens I add storytelling, branding and the sensibility to build communities that actually stick.">
+            A esa mirada de negocio y datos le sumo storytelling, branding y la sensibilidad para construir comunidades que de verdad se quedan.
+          </p>
+          <dl class="about__meta">
+            <div>
+              <dt data-es="Base" data-en="Based in">Base</dt>
+              <dd>Montevideo, Uruguay</dd>
+            </div>
+            <div>
+              <dt data-es="Idiomas" data-en="Languages">Idiomas</dt>
+              <dd data-es="Español · Inglés · Portugués" data-en="Spanish · English · Portuguese">Español · Inglés · Portugués</dd>
+            </div>
+            <div>
+              <dt data-es="Disponibilidad" data-en="Availability">Disponibilidad</dt>
+              <dd data-es="Freelance / remoto" data-en="Freelance / remote">Freelance / remoto</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__item">L'Oréal</span>
+    <span class="marquee__item">Kiehl's</span>
+    <span class="marquee__item">Biotherm</span>
+    <span class="marquee__item">Dove</span>
+    <span class="marquee__item">Axe</span>
+    <span class="marquee__item">Lancôme</span>
+    <span class="marquee__item">YSL</span>
+    <span class="marquee__item">Giorgio Armani</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee__item">L'Oréal</span>
+    <span class="marquee__item">Kiehl's</span>
+    <span class="marquee__item">Biotherm</span>
+    <span class="marquee__item">Dove</span>
+    <span class="marquee__item">Axe</span>
+    <span class="marquee__item">Lancôme</span>
+    <span class="marquee__item">YSL</span>
+    <span class="marquee__item">Giorgio Armani</span>
+  </div>
+</div>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section section--soft" id="servicios" data-screen-label="Servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-es="Cómo puedo ayudarte" data-en="How I can help">Cómo puedo ayudarte</h2>
+      <span class="num" data-es="Servicios freelance" data-en="Freelance services">Servicios freelance</span>
+    </div>
+    <div class="svc__grid">
+      <article class="svc reveal">
+        <span class="svc__dot"></span>
+        <span class="svc__n">01</span>
+        <h3 data-es="Community Management" data-en="Community Management">Community Management</h3>
+        <p data-es="Gestión de redes de punta a punta: línea editorial, calendario, copy y conversación con tu comunidad para que crezca y se quede."
+           data-en="End-to-end social management: editorial line, calendar, copy and real conversation with your community so it grows and sticks.">
+          Gestión de redes de punta a punta: línea editorial, calendario, copy y conversación con tu comunidad para que crezca y se quede.
+        </p>
+      </article>
+      <article class="svc reveal">
+        <span class="svc__dot"></span>
+        <span class="svc__n">02</span>
+        <h3 data-es="Estrategia de contenido" data-en="Content strategy">Estrategia de contenido</h3>
+        <p data-es="Diagnóstico, posicionamiento y un plan de contenido con storytelling de marca y formatos pensados para cada canal."
+           data-en="Audit, positioning and a content plan with brand storytelling and formats built for each channel.">
+          Diagnóstico, posicionamiento y un plan de contenido con storytelling de marca y formatos pensados para cada canal.
+        </p>
+      </article>
+      <article class="svc reveal">
+        <span class="svc__dot"></span>
+        <span class="svc__n">03</span>
+        <h3 data-es="Influencer marketing &amp; eventos" data-en="Influencer marketing & events">Influencer marketing &amp; eventos</h3>
+        <p data-es="Scouting de perfiles, gestión de colaboraciones y producción de eventos de marca, del brief a la evaluación de resultados."
+           data-en="Profile scouting, collaboration management and brand-event production, from brief to results evaluation.">
+          Scouting de perfiles, gestión de colaboraciones y producción de eventos de marca, del brief a la evaluación de resultados.
+        </p>
+      </article>
+      <article class="svc reveal">
+        <span class="svc__dot"></span>
+        <span class="svc__n">04</span>
+        <h3 data-es="Análisis de datos &amp; reporting" data-en="Data analysis & reporting">Análisis de datos &amp; reporting</h3>
+        <p data-es="Dashboards, seguimiento de KPIs y reportes claros que convierten los números en decisiones (CRM, Meta &amp; Google Ads)."
+           data-en="Dashboards, KPI tracking and clear reports that turn numbers into decisions (CRM, Meta & Google Ads).">
+          Dashboards, seguimiento de KPIs y reportes claros que convierten los números en decisiones (CRM, Meta &amp; Google Ads).
+        </p>
+      </article>
+    </div>
+
+    <div class="tools">
+      <div>
+        <h4 data-es="Herramientas" data-en="Tools">Herramientas</h4>
+        <ul>
+          <li>CRM</li><li>Meta &amp; Google Ads</li><li>Data Slayer</li><li>SAP</li><li>Trello</li><li>Microsoft Office</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-es="Expertise" data-en="Expertise">Expertise</h4>
+        <ul>
+          <li data-es="Branding" data-en="Branding">Branding</li><li>Storytelling</li><li data-es="E-commerce" data-en="E-commerce">E-commerce</li><li data-es="CRM &amp; email" data-en="CRM &amp; email">CRM &amp; email</li><li data-es="Omnicanal" data-en="Omnichannel">Omnicanal</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-es="Idiomas" data-en="Languages">Idiomas</h4>
+        <ul>
+          <li data-es="Español — nativo" data-en="Spanish — native">Español — nativo</li><li data-es="Inglés — avanzado" data-en="English — advanced">Inglés — avanzado</li><li data-es="Portugués — intermedio" data-en="Portuguese — intermediate">Portugués — intermedio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CV BAND ===================== -->
+<section class="section cv" data-screen-label="CV">
+  <div class="wrap">
+    <div class="cv__in">
+      <span class="swoosh swoosh--f"></span>
+      <div class="cv__txt">
+        <span class="kicker on-dark" data-es="Currículum" data-en="Résumé">Currículum</span>
+        <h2 data-es="¿Querés el detalle completo?" data-en="Want the full detail?">¿Querés el detalle completo?</h2>
+        <p data-es="Mirá mi experiencia y formación en un solo lugar."
+           data-en="See my experience and education all in one place.">
+          Mirá mi experiencia y formación en un solo lugar.
+        </p>
+      </div>
+      <div class="cv__btns">
+        <a href="cv.html" target="_blank" rel="noopener" class="btn btn--solid" data-es="Ver / Descargar CV" data-en="View / Download CV">Ver / Descargar CV <span class="ar">↗</span></a>
+        <a href="https://www.linkedin.com/in/sol-martinez-/" target="_blank" rel="noopener" class="btn btn--ghost" data-es="Ver LinkedIn" data-en="View LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section contact" id="contacto" data-screen-label="Contacto">
+  <span class="swoosh swoosh--g"></span>
+  <span class="swoosh swoosh--h"></span>
+  <div class="wrap">
+    <span class="kicker on-dark" data-es="Contacto" data-en="Contact">Contacto</span>
+    <h2 data-es="Trabajemos <em>juntos</em>." data-en="Let's <em>work</em> together.">Trabajemos <em>juntos</em>.</h2>
+    <a class="contact__mail" href="/cdn-cgi/l/email-protection#92fff3e0e6fbfcf7e8e0fbe1e1fde6e6fdd2f5fff3fbfebcf1fdff"><span class="__cf_email__" data-cfemail="05686477716c6b607f776c76766a71716a456268646c692b666a68">[email&#160;protected]</span></a>
+    <div class="contact__links">
+      <a href="/cdn-cgi/l/email-protection#ef828e9d9b86818a959d869c9c809b9b80af88828e8683c18c8082" class="btn btn--on-dark" data-es="Enviar email" data-en="Send email">Enviar email <span class="ar">↗</span></a>
+      <a href="https://www.linkedin.com/in/sol-martinez-/" target="_blank" rel="noopener" class="btn btn--on-dark">LinkedIn <span class="ar">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="image-slot.js"></script>
+<script src="site.js"></script>
+
+<!-- Tweaks panel (React) -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks-app.jsx"></script>
+
+</body>
+</html>
